@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Bent Creek Ceramics</title>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700|Roboto:300,300i,400,400i" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <header>
-      <a href="index.html"><img id="logo" src="images/bent-creek-logo.png" alt="Bent Creek Logo"></a>
-      <nav class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-      </nav>
-    </header>
-    <main>
-      <div class="pageheadtext">
-        <h1>Bent Creek Ceramics</h1>
-        <h2>Where art meets nature</h2>
-      </div>
-      <section class="product-gallery">
-        <div class="galrow1">
-          <div>
-            <a href="#"><img src="images/product-1.jpg" alt="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bent Creek Ceramics</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700|Roboto:300,300i,400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/bent-creek-logo-coral.png" type="image/gif" sizes="16x16">
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img id="logo" src="images/bent-creek-logo.png" alt="Bent Creek Logo"></a>
+    <nav class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+    </nav>
+  </header>
+  <main id="home-container">
+    <div class="pageheadtext">
+      <h1>Bent Creek Ceramics</h1>
+      <h2>Where art meets nature</h2>
+    </div>
+    <section class="product-gallery">
+      <div class="galrow1">
+        <div>
+          <a href="#"><img src="images/product-1.jpg" alt="">
               <p>Endless Possibilities</p></a>
-          </div>
-          <div>
-            <a href="#"><img src="images/product-2.jpg" alt=""></a>
-              <p>Sets</p>
-          </div>
-          <div>
-            <a href="#"><img src="images/product-3.jpg" alt=""></a>
-            <p>Textures</p>
-          </div>
         </div>
-
-        <div class="galrow2">
-          <div>
-            <a href="#"><img src="images/product-4.jpg" alt=""></a>
-            <p>Tea Time</p>
-          </div>
-          <div>
-            <a href="#"><img src="images/product-5.jpg" alt=""></a>
-            <p>Jars and Containers</p>
-          </div>
-          <div>
-            <a href="#"><img src="images/product-6.jpg" alt=""></a>
-            <p>Wasabi and Saki</p>
-          </div>
-          <div>
-            <a href="#"><img src="images/product-7.jpg" alt=""></a>
-            <p>Sippin' on Sunshine</p>
-          </div>
+        <div>
+          <a href="#"><img src="images/product-2.jpg" alt=""></a>
+          <p>Sets</p>
         </div>
+        <div>
+          <a href="#"><img src="images/product-3.jpg" alt=""></a>
+          <p>Textures</p>
+        </div>
+      </div>
 
-      </section>
-    </main>
-    <footer>
-      <p>Copyright 2017, Bent Creek Ceramics</p>
-    </footer>
-  </body>
+      <div class="galrow2">
+        <div>
+          <a href="#"><img src="images/product-4.jpg" alt=""></a>
+          <p>Tea Time</p>
+        </div>
+        <div>
+          <a href="#"><img src="images/product-5.jpg" alt=""></a>
+          <p>Jars and Containers</p>
+        </div>
+        <div>
+          <a href="#"><img src="images/product-6.jpg" alt=""></a>
+          <p>Wasabi and Saki</p>
+        </div>
+        <div>
+          <a href="#"><img src="images/product-7.jpg" alt=""></a>
+          <p>Sippin' on Sunshine</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <p>Copyright 2017, Bent Creek Ceramics</p>
+  </footer>
+  <script type="text/javascript">
+    var nameInput = document.getElementById('nameInput');
+    var emailInput = document.getElementById('emailInput');
+    var signupButton = document.getElementById('signupButton');
+    signupButton.addEventListener('click', function(e) {
+      var nameVal = nameInput.value;
+      var emailVal = emailInput.value;
+      if (nameVal && emailVal) {
+        alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+        nameInput.value = "";
+        emailInput.value = "";
+      } else {
+        alert('We would love for you to sign up, please provide both your name and email address.');
+      }
+    });
+  </script>
+</body>
+
 </html>

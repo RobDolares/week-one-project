@@ -17,25 +17,18 @@ Input Border Bottom (Focus): #967343
 
 */
 
+
 /*Bonus
 
 Create and apply a favicon.
-Use CSS only to make navigation links all caps. COMPLETED
-Apply a subtle drop shadow to the bottom of the header.
 Apply a subtle transition duration to hover and focus states
-Apply parallax scrolling to the background image in the "Room to Grow" section on the about page. When scrolled the image appears to stay stationary while the sections above and below scroll over. This can be done with with the css background and background-size properties.
 Add the id nameInput to the name input field in the newsletter page.
 Add the id emailInput to the email input field in the newsletter page.
 Add the id signupButton to the "Submit" button in the newsletter page.
 Include the following code snippet just before the closing body tag (</body>) in newsletter/index.html:*/
-/*Global CSS for site*/
 
-/*font-family: 'Merriweather', serif;
-font-family: 'Roboto', sans-serif;*/
 
-* {
-  margin: 0 auto;
-}
+/*Global CSS for site - Navigation*/
 
 html {
   font-family: 'Merriweather', serif;
@@ -57,8 +50,8 @@ header {
 #logo {
   float: left;
   z-index: 2;
-  width: 50px;
-  padding: 5px;
+  width: 40px;
+  padding: 10px;
   margin-left: 10px;
 }
 
@@ -92,15 +85,16 @@ li a:active {
 
 li a:hover {
   color: #CD5D67;
+  transition-duration: 300ms;
 }
+
 
 /***** End Navigation *****/
 
-main {
 
-}
+/*****  Styling index.html main page *****/
 
-.pageheadtext{
+.pageheadtext {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -116,7 +110,8 @@ h1 {
 h2 {
   font-weight: lighter;
   font-size: 1.8em;
-  margin: 10px 0 30px 0;;
+  margin: 10px 0 30px 0;
+  ;
 }
 
 h3 {
@@ -124,8 +119,6 @@ h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
-
-/*****  Styling index.html main page *****/
 
 .product-gallery {
   margin: 0 10px;
@@ -140,16 +133,15 @@ h3 {
 .galrow1 div {
   flex-basis: 20%;
   margin: 1vh;
-
 }
 
 .product-gallery p {
   font-size: 0.9em;
   color: #F2F1E8;
-  padding: 10px;
+  padding: 8px 13px;
   background-color: #2B2F26;
   position: relative;
-  bottom: 55px;
+  bottom: 60px;
   margin: 0;
   display: inline-block;
 }
@@ -159,16 +151,17 @@ h3 {
 }
 
 .galrow1 div a img {
-   object-fit: cover;
-   flex: 1;
-   width: 100%;
-   height: 300px;
+  object-fit: cover;
+  flex: 1;
+  width: 100%;
+  height: 300px;
 }
 
 .galrow2 {
   height: 200px;
   display: flex;
   margin-top: 2vh;
+  margin-bottom: 20px;
 }
 
 .galrow2 div {
@@ -181,10 +174,14 @@ h3 {
 }
 
 .galrow2 div a img {
-   object-fit: cover;
-   flex: 1;
-   width: 100%;
-   height: 200px;
+  object-fit: cover;
+  flex: 1;
+  width: 100%;
+  height: 200px;
+}
+
+footer {
+  height: 50px;
 }
 
 footer p {
@@ -192,8 +189,8 @@ footer p {
   background-color: #2B2F26;
   color: #F2F1E8;
   padding: 30px;
-  margin-top: 20px;
 }
+
 
 /***** Styling about.html page *****/
 
@@ -203,6 +200,7 @@ footer p {
   padding-right: 25px;
   padding-bottom: 5px;
 }
+
 .overview {
   margin-top: 40px;
 }
@@ -213,8 +211,8 @@ footer p {
 
 .overview a:hover {
   color: #967343;
+  transition-duration: 300ms;
 }
-
 
 section p {
   line-height: 2em;
@@ -256,6 +254,7 @@ section {
 #facilities {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 #facilities h3 {
@@ -278,12 +277,21 @@ aside p {
 }
 
 aside img {
-  width: 150px;s
+  width: 150px;
+  s
 }
 
-table, tr, td{
+.plans {
+  margin-bottom: 50px;
+}
+
+.plans h3 {
+  margin-bottom: 10px;
+}
+
+table, tr, td {
   padding: 15px;
-  margin: 20px 0;
+  margin: 10px 0;
   border: 1px solid #2B2F26;
   border-collapse: collapse;
 }
@@ -292,7 +300,66 @@ thead tr {
   text-align: center;
 }
 
-tbody tr:nth-child(1),
-tbody tr:nth-child(3) {
+tbody tr:nth-child(1), tbody tr:nth-child(3) {
   background-color: #f2eadc;
+}
+
+
+/***** END ABOUT PAGE STYLING *****/
+
+
+/***** START NEWSLETTER STYLING *****/
+
+#news-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  background-image: url("../images/background-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.signup {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  height: 250px;
+  background-color: #FFF;
+  padding: 25px;
+  margin: 0 25%;
+  box-shadow: 1px 1px 1px #968772;
+}
+
+.signup p {
+  margin: 0 auto 10px auto;
+  color: #2B2F26;
+  font-size: 0.9em;
+}
+
+.signup p:nth-child(1) {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #968772;
+  font-size: 0.9em;
+  color: #968772;
+}
+
+button {
+  font-size: 0.9em;
+  padding: 15px 25px;
+  border-style: none;
+  color: #F2F1E8;
+  background-color: #968772;
+  margin: 0 auto;
+}
+
+button:hover {
+  color: #FFFFFF;
+  background-color: #967343;
+  transition-duration: 300ms;
 }
