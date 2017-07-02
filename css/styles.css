@@ -20,7 +20,7 @@ Input Border Bottom (Focus): #967343
 /*Bonus
 
 Create and apply a favicon.
-Use CSS only to make navigation links all caps.
+Use CSS only to make navigation links all caps. COMPLETED
 Apply a subtle drop shadow to the bottom of the header.
 Apply a subtle transition duration to hover and focus states
 Apply parallax scrolling to the background image in the "Room to Grow" section on the about page. When scrolled the image appears to stay stationary while the sections above and below scroll over. This can be done with with the css background and background-size properties.
@@ -50,6 +50,7 @@ body {
 }
 
 header {
+  box-shadow: 0 2px 2px -1px #c3c3c3;
   background-color: #FFF;
 }
 
@@ -79,9 +80,9 @@ li {
 li a {
   color: #2B2F26;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   width: 10%;
-  padding: 20px;
+  padding: 25px;
   text-transform: uppercase;
 }
 
@@ -92,6 +93,8 @@ li a:active {
 li a:hover {
   color: #CD5D67;
 }
+
+/***** End Navigation *****/
 
 main {
 
@@ -106,7 +109,7 @@ main {
 
 h1 {
   font-weight: normal;
-  font-size: 3em;
+  font-size: 3.1em;
   margin: 0px;
 }
 
@@ -116,8 +119,11 @@ h2 {
   margin: 10px 0 30px 0;;
 }
 
-
-
+h3 {
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
 
 /*****  Styling index.html main page *****/
 
@@ -137,7 +143,7 @@ h2 {
 
 }
 
-div p {
+.product-gallery p {
   font-size: 0.9em;
   color: #F2F1E8;
   padding: 10px;
@@ -187,4 +193,106 @@ footer p {
   color: #F2F1E8;
   padding: 30px;
   margin-top: 20px;
+}
+
+/***** Styling about.html page *****/
+
+#birdhouse {
+  float: left;
+  width: 140px;
+  padding-right: 25px;
+  padding-bottom: 5px;
+}
+.overview {
+  margin-top: 40px;
+}
+
+.overview a {
+  color: #968772;
+}
+
+.overview a:hover {
+  color: #967343;
+}
+
+
+section p {
+  line-height: 2em;
+}
+
+#about-container {
+  margin: 0 auto;
+}
+
+blockquote {
+  padding: 5px 15px 5px 25px;
+  margin-top: 30px;
+  line-height: 1.9em;
+  border-left: 2px solid #968772;
+}
+
+section {
+  margin: 30px 15%;
+}
+
+#parallax {
+  text-align: center;
+  background-image: url("../images/background-3.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 260px;
+}
+
+#parallax h1 {
+  display: block;
+  position: relative;
+  top: 100px;
+  color: #F2F1E8;
+  text-shadow: 1px 1px 1px black;
+}
+
+#facilities {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#facilities h3 {
+  flex-basis: 100%;
+}
+
+#facilities div {
+  padding-right: 20px;
+  flex-basis: 20%;
+  flex-grow: 3;
+}
+
+aside {
+  flex-basis: 20%;
+}
+
+aside p {
+  padding-top: 10px;
+  font-size: .7em;
+}
+
+aside img {
+  width: 150px;s
+}
+
+table, tr, td{
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #2B2F26;
+  border-collapse: collapse;
+}
+
+thead tr {
+  text-align: center;
+}
+
+tbody tr:nth-child(1),
+tbody tr:nth-child(3) {
+  background-color: #f2eadc;
 }
