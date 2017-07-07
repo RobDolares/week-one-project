@@ -43,6 +43,8 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0px;
   box-shadow: 0 2px 2px -1px #c3c3c3;
   background-color: #FFF;
 }
